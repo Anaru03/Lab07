@@ -1,0 +1,143 @@
+    
+.paper {
+    background: url(https://doqmeat.neocities.org/!g/bg/whiteline.jpg);
+    z-index: 5;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+    height: 600px;
+}
+
+.left {
+    width: 490px;
+    margin-left: 50px;
+    margin-right: 10px;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+}
+
+.left-in {
+    padding: 15px 10px 15px 25px;
+    height: 100%;
+    margin-right: 15px;
+    overflow: auto;
+}
+
+.right {
+    padding: 15px 25px;
+    width: 490px;
+    margin-left: 10px;
+    border-radius: 0px 10px 10px 0px;
+    overflow: auto;
+}
+
+
+#tab2-p {
+    font-family: consolas;
+    font-size: 14px;
+    background: url(https://doqmeat.neocities.org/!g/bg/yellobg.png);
+    border-color: lightcoral;
+}
+
+
+.tab {
+    width: 590px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    rotate: -90deg;
+    top: -10px;
+    left: -232px;
+}
+
+.tab2 {
+    width: 590px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    rotate: 90deg;
+    top: 590px;
+    right: -232px;
+}
+
+.tab button,
+.tab2 button {
+    z-index: 1;
+    position: relative;
+    vertical-align: top;
+    width: 120px;
+    margin: 0px 8px;
+    padding: 10px 0px 30px 0px;
+    font-family: newpenji, ms pgothic;
+    border: none;
+    cursor: help;
+    font-size: 19px;
+    transition-duration: 0.5s;
+    top: 10px;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid grey;
+}
+
+.tab1-b {
+    background: #C5DCA0;
+}
+
+.tab2-b {
+    background: #B6A7DC;
+}
+
+.tab3-b {
+    background: #F9DAD0;
+}
+
+.tab4-b {
+    background: #F5F2B8;
+}
+
+.tab5-b {
+    background: #F1B46A;
+}
+
+.tab button:hover,
+.tab2 button:hover {
+    top: 0px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.tab button.active,
+.tab2 button.active {
+    top: 0px;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    box-shadow: 1px 1px 20px 1px grey;
+}
+
+.tabcontent {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ruth´s Blog</title>
+        <link rel="icon" type="image/x-icon"href="https://cdn-icons-png.flaticon.com/512/2784/2784389.png">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <style>
+            html {
+                cursor: cell;
+            }
+    
+            body {
+                background: lightblue;
+                margin: 0px;
+                word-wrap: break-word;
+                font-size: 19px;
+                line-height: 25px;
+                word-spacing: 4px;
+                font-family: ms pgothic, arial;
+                color: black;
+            }
+    
+            mark {
+                background: lightgoldenrodyellow;
+            }
+    
+            #wrapper-index {
+                background: lightgrey;
+                position: relative;
+                margin: auto;
+                margin-top: 30px;
+                margin-bottom: 35px;
+                width: 1108px;
+                padding: 20px 10px 15px 10px;
+                border-radius: 20px;
+                border: 1px solid black;
+            }
+    
+            #tab1-wrapper:after,
+            #tab2-wrapper:after,
+            #tab3-wrapper:after,
+            #tab4-wrapper:after,
+            #tab5-wrapper:after,
+            #tab6-wrapper:after,
+            #tab7-wrapper:after,
+            #tab8-wrapper:after {
+                content: url(https://doqmeat.neocities.org/!g/web/materials/spiral-test4.png);
+                position: absolute;
+                z-index: 10;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                pointer-events: none;
+            }
+        </style>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+<body>
+    <div id="root"></div>
+    <div id="wrapper-index">
+
+		<div class="tab">
+			<button class="tablinks tab4-b" onclick="openTab(event, 'tab4-wrapper')">lovemail</button>
+			<button class="tablinks tab3-b" onclick="openTab(event, 'tab3-wrapper')">byi/dni</button>
+			<button class="tablinks tab2-b" onclick="openTab(event, 'tab2-wrapper')">my profile</button>
+			<button class="tablinks tab1-b" onclick="openTab(event, 'tab1-wrapper')" id="defaultOpen">introduction</button> <!-- 	id="defaultOpen" chooses which tab the notebook will have open when reloaded -->
+		</div>
+
+		<div class="tab2">
+			<button class="tablinks tab5-b" onclick="openTab(event, 'tab5-wrapper')">socials</button>
+			<button class="tablinks tab6-b" onclick="openTab(event, 'tab6-wrapper')">rentry stuff</button>
+			<button class="tablinks tab7-b" onclick="openTab(event, 'tab7-wrapper')">yap session</button>
+			<button class="tablinks tab8-b" onclick="openTab(event, 'tab8-wrapper')">update logs</button>
+		</div>
+
+		<!-- 	TAB 1 wrapper -->
+		<div id="tab1-wrapper" class="tabcontent">
+			<div id="tab1-p" class="paper left">
+				<div class="left-in">
+					<b>hiiiii welcome!</b> this site is under reconstruction!!
+					
+					<br><br>
+					this site is just my little space to rant or babble about whatever lol, made for my discord and not suitable for mobile
+					
+					<br><br>
+					honestly im gonna be honest i dont fucking know what to do with this HELPP i made this out of boredom and for fun so umm yeah oh also i have more tabs for info about me so heheheheh go there
+
+					<!-- TAB 1 left paper end divs -->
+				</div>
+			</div>
+			<div id="tab1-p" class="paper right">
+				im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland im ike eveland 
+				<!-- TAB 1 right paper end divs -->
+			</div>
+			<!-- 	TAB 1 wrapper end div -->
+		</div>
+
+		<!-- TAB 2 wrapper -->
+		<div id="tab2-wrapper" class="tabcontent">
+			<div id="tab2-p" class="paper left">
+				<div class="left-in">
+					wip
+
+					<!-- TAB 2 left paper end divs -->
+				</div>
+			</div>
+			<div id="tab2-p" class="paper right">
+				wip
+
+				<!-- TAB 2 right paper end div -->
+			</div>
+			<!-- TAB 2 wrapper end div -->
+		</div>
+
+		<div id="tab3-wrapper" class="tabcontent">
+			<div id="tab3-p" class="paper left">
+				<div class="left-in">
+					wip
+
+				</div>
+			</div>
+			<div id="tab3-p" class="paper right">
+				wip
+
+			</div>
+		</div>
+
+		<div id="tab4-wrapper" class="tabcontent">
+			<div id="tab4-p" class="paper left">
+				<div class="left-in">
+					wip
+
+				</div>
+			</div>
+			<div id="tab4-p" class="paper right">
+				wip
+
+
+			</div>
+		</div>
+
+
+		<div id="tab5-wrapper" class="tabcontent">
+			<div id="tab5-p" class="paper left">
+				<div class="left-in">
+					wip
+
+				</div>
+			</div>
+			<div id="tab5-p" class="paper right">
+				wip
+
+			</div>
+		</div>
+
+		<div id="tab6-wrapper" class="tabcontent">
+			<div id="tab6-p" class="paper left">
+				<div class="left-in">
+					IM IKE EVELA
+
+				</div>
+			</div>
+			<div id="tab6-p" class="paper right">
+				hello. mortal.
+
+			</div>
+		</div>
+
+		<div id="tab7-wrapper" class="tabcontent">
+			<div id="tab7-p" class="paper left">
+				<div class="left-in">
+					wip
+
+				</div>
+			</div>
+			<div id="tab7-p" class="paper right">
+				wip
+
+			</div>
+		</div>
+
+		<div id="tab8-wrapper" class="tabcontent">
+			<div id="tab8-p" class="paper left">
+				<div class="left-in">
+					wip
+
+				</div>
+			</div>
+			<div id="tab8-p" class="paper right">
+				wip
+
+			</div>
+		</div>
+
+
+		<!-- TEMPLATE for new set of TAB pages
+
+	<div id="tab[num]-wrapper" class="tabcontent">
+	<div id="tab[num]-p" class="paper left">
+ <div class="left-in">
+		text goes here
+
+		</div></div>
+	<div id="tab[num]-p" class="paper right">
+		text goes here
+
+	</div></div>
+
+-->
+
+		<!-- NOTEBOOK wrapper end div -->
+	</div>
+
+
+	<script>
+		function download() {
+			var text = document.getElementById("my-textarea").value;
+			text = text.replace(/\n/g, "\r\n"); // To retain the Line breaks.
+			var blob = new Blob([text], {
+				type: "text/plain"
+			});
+			var anchor = document.createElement("a");
+			anchor.download = "notebook-page.txt";
+			anchor.href = window.URL.createObjectURL(blob);
+			anchor.target = "_blank";
+			anchor.style.display = "none"; // just to be safe!
+			document.body.appendChild(anchor);
+			anchor.click();
+			document.body.removeChild(anchor);
+		}
+
+		function openTab(evt, tabName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(tabName).style.display = "block";
+			evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+
+	</script>
+</body>
+</html>
