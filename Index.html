@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ruth´s Blog</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15/prop-types.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const Api = async () => {
+        const datos = await fetch("http://localhost:22428/posts");
+        const json = await datos.json();
+
+        return json;
+      };
+
+      function Header() {
+        const [resNav, setResNav] = React.useState(window.innerWidth > 900 ? true : false);
+      
+        const handler = () => {
+          if (window.innerWidth < 600) {
+            setResNav(false);
+          } else {
+            setResNav(true);
+          }
+        };
+      
+        return (
+          <nav>
+            <div className="contenedor contenedor-nav">
+              <img
+                className="nav-logo"
+                src="IMG/escudo.png"
+                alt="Imagen del logo"
+              />
+      
+              <button
+                className="nav-res-menu"
+                onClick={() => setResNav(!resNav)}
+              >
+              </button>
+            </div>
+      
+            <div className="nav-table-container">
+              <table className="nav-table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <ul className="nav-menu">
+                        <li>Crear un post</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul className="nav-menu">
+                        <li>Autores</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul className="nav-menu">
+                        <li>Sobre Mi</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul className="nav-menu">
+                        <li>Log Out</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </nav>
+        );
+      }
+      
+
+      function Footer() {
+        return (
+          <footer>
+            <div className="Blog-footer">
+              <small>Ruth´s Blog &copy;</small>
+            </div>
+          </footer>
+        );
+      }
+
+      function Post({ id, title, content, created_at, images_content, author_name}) {
+        
+        return (
+          <article className="post">
+            <div className="Post-Subido">
+            </div>
+
+            <div className="contenido-post">
+              <h3>{title}</h3>
+              <p>{content}</p>
+              <p>{created_at}</p>
+              <p>{images_content}</p>
+              <img src={author_name} alt="imagen"/>
+              <p>{images_content}</p>
+            </div>
+          </article>
+        );
+      }
+
+      function Posts({ post }) {
+        return (
+          <section className="posts">
+            <div className="contenedor contenedor-posts">
+              {post.map(
+                ({ id, title, content, created_at, images_content, author_name}) => (
+                  <Post
+                    id={id}
+                    title={title}
+                    content={content}
+                    created_at={created_at}
+                    images_content={images_content}
+                    author_name={author_name}
+                  />
+                )
+              )}
+            </div>
+          </section>
+        );
+      }
+
+      Posts.propTypes = {
+        post: PropTypes.object.isRequired,
+      };
+
+      function App() {
+        const [posts, setPosts] = React.useState([]);
+
+        const datos = async () => {
+          const postsD = await Api();
+          setPosts(postsD);
+        };
+
+        React.useEffect(() => {
+          datos();
+        }, []);
+
+        return (
+          <>
+            <Header />
+            <Posts post={posts} />
+            <Footer />
+          </>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
