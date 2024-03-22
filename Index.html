@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Ruth´s Blog</title>
+    <title>⚡ Potterhead´s blog ⚡</title>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -39,12 +39,7 @@
                 src="IMG/escudo.png"
                 alt="Imagen del logo"
               />
-      
-              <button
-                className="nav-res-menu"
-                onClick={() => setResNav(!resNav)}
-              >
-              </button>
+    
             </div>
           </nav>
         );
@@ -96,7 +91,6 @@
               <h2>{title}</h2>
               <p>{content}</p>
               <p>{dateTimeString}</p>
-              <p>{images_content}</p>
               <img src={author_name} alt="imagen"/>
               <p>{images_content}</p>
             </div>
@@ -125,9 +119,6 @@
         );
       }
 
-      Posts.propTypes = {
-        post: PropTypes.object.isRequired,
-      };
 
       function App() {
         const [posts, setPosts] = React.useState([]);
