@@ -14,7 +14,7 @@
     <div id="root"></div>
     <script type="text/babel">
       const Api = async () => {
-        const datos = await fetch("http://localhost:22428/posts");
+        const datos = await fetch("http://22428.arpanetos.lol:22428/posts");
         const json = await datos.json();
 
         return json;
